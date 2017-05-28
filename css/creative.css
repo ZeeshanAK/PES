@@ -20,6 +20,24 @@ a {
   transition: all 0.35s;
   color: #F05F40;
 }
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
 a:hover,
 a:focus {
   color: #eb3812;
@@ -139,6 +157,9 @@ aside {
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #F05F40;
+  }
+  .navbar-right > li > a:hover {
+	animation: bounce 1s;
   }
 }
 header {
@@ -491,3 +512,5 @@ body {
     -moz-transform:rotateY(0);
     transform:rotateY(0)
 }
+
+
